@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="renderer" content="webkit"/>
+  <title>表单，弹窗</title>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  <script type="text/javascript" src="js/thea.debug.js"></script>
+</head>
+<body>
+
+<div>
+  <!-- 测评模块 -->
+  <div class="appraisal">
+    <div class="top">
+      <img src="images/appraisal.png" alt="测评">
+      <p class="text">
+        *每天前10名参与测评的学员，报名即可获赠价值 <span>1000元优惠</span>
+      </p>
+    </div>
+    <div class="appraisal-data">
+      <ul>
+        <li>
+          <p>1. 您的年龄是<input type="text" class="user-con">周岁</p>
+          <input type="hidden" class="user-con" value="">
+        </li>
+        <li>
+          <p>2. 您目前的最高学历？</p>
+          <span class="active">高中（中专、职校、技校）及以下</span>
+          <span>大专（高职）学历</span>
+          <span>大学本科学历</span>
+          <span>硕士研究生学位</span>
+          <span>硕士研究生学历学位</span>
+          <span>博士研究生学历学位</span>
+          <span>大学本科学历和学士学位</span>
+          <input type="hidden" class="user-con" value="高中（中专、职校、技校）及以下">
+        </li>
+        <li>
+          <p>3. 您的毕业年限？</p>
+          <span class="active">应届毕业生</span>
+          <span>1-3年</span>
+          <span>3-4年</span>
+          <span>4-5年</span>
+          <span>5年以上</span>
+          <input type="hidden" class="user-con" value="应届毕业生">
+        </li>
+        <li>
+          <p>4. 您目前所在的公司属性？</p>
+          <span class="active">国有企业</span>
+          <span>民营企业</span>
+          <span>外资企业</span>
+          <span>其他</span>
+          <input type="hidden" class="user-con" value="国有企业">
+        </li>
+        <li>
+          <p>5. 您目前的职位？</p>
+          <span class="active">总监</span>
+          <span>总经理（副总）</span>
+          <span>董事长</span>
+          <span>投资人</span>
+          <span>其他</span>
+          <input type="hidden" class="user-con" value="总监">
+        </li>
+        <li>
+          <p>6. 您想学习的主要课程类型？</p>
+          <span class="active">全日制研究生</span>
+          <span>在职研究生</span>
+          <span>EMBA学位班</span>
+          <span>国外免考MBA学位班</span>
+          <span>国外免考DBA学位班</span>
+          <input type="hidden" class="user-con" value="全日制研究生">
+        </li>
+        <li>
+          <p>7. 您想提升的方面？</p>
+          <span class="active">学历学位</span>
+          <span>实战管理经验</span>
+          <span>人脉拓展</span>
+          <span>自身价值提升</span>
+          <input type="hidden" class="user-con" value="学历学位">
+        </li>
+        <form class="sign-in">
+          <input type="text" class="user-name" placeholder="请输入您的姓名">
+          <input type="text" class="user-tel" placeholder="请输入您的联系方式">
+          <input type="hidden" id="aptitude" class="user-con"
+                 value=" 、高中（中专、职校、技校）及以下、应届毕业生、国有企业、总监、全日制研究生、学历学位">
+          <input class="submit" type="submit" value="立即测评">
+        </form>
+      </ul>
+    </div>
+    <p class="hint">提交信息后，评测结果将即时发送至您的手机</p>
+  </div>
+
+  <!-- 试听模块-pc -->
+  <div class="audition-pc">
+    <img src="images/audition-pc.png" alt="" class="pc-bg">
+    <div class="degree">
+      <div class="title">国际硕士/博士学位</div>
+      <div class="reap">
+        <span>免试入学</span>
+        <span>轻松拿证</span>
+        <span>黄金人脉</span>
+        <span>全球通认</span>
+      </div>
+    </div>
+    <form class="sign-in">
+      <!--原本的select 隐藏-->
+      <select class="education">
+        <option>学历</option>
+        <option value="education-1">大专</option>
+        <option value="education-2">本科</option>
+        <option value="education-3">硕士</option>
+        <option value="education-3">其他</option>
+      </select>
+      <!--显示模拟的select-->
+      <div class="education-replace">
+        <input class="current-education user-con" type="text"
+               value="学历" readonly="readonly">
+        <ul class="education-options">
+          <li rel="education-1">大专</li>
+          <li rel="education-2">本科</li>
+          <li rel="education-3">硕士</li>
+          <li rel="education-3">其他</li>
+        </ul>
+      </div>
+
+      <input type="text" placeholder="您的姓名" class="user-name">
+      <input type="text" placeholder="手机号码" class="user-tel">
+      <input type="submit" value="预约免费听课" class="submit">
+    </form>
+  </div>
+
+  <!-- 试听模块-wap -->
+  <div class="audition-wap">
+    <div class="degree">
+      <div class="title">国际硕士/博士学位</div>
+      <div class="reap">
+        <span>免试入学</span>
+        <span>轻松拿证</span>
+        <span>黄金人脉</span>
+        <span>全球通认</span>
+      </div>
+    </div>
+    <form class="sign-in">
+      <!--原本的select 隐藏-->
+      <select class="education-wap">
+        <option>学历</option>
+        <option value="education-1">大专</option>
+        <option value="education-2">本科</option>
+        <option value="education-3">硕士</option>
+        <option value="education-3">其他</option>
+      </select>
+      <!--显示模拟的select-->
+      <div class="education-wap-replace">
+        <input class="current-wap-education user-con" type="text"
+               value="学历" readonly="readonly">
+        <ul class="education-wap-options">
+          <li rel="education-1">大专</li>
+          <li rel="education-2">本科</li>
+          <li rel="education-3">硕士</li>
+          <li rel="education-3">其他</li>
+        </ul>
+      </div>
+
+      <input type="text" placeholder="您的姓名" class="user-name">
+      <input type="text" placeholder="手机号码" class="user-tel">
+      <input type="submit" value="预约免费听课" class="submit">
+    </form>
+  </div>
+
+  <!-- 邀请弹窗 -->
+  <div class="invite-popup">
+    <i class="close"></i>
+    <div class="invite-data">
+      <ul>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>目前学历</p>
+            <span class="active">专科以下</span>
+            <span>专科</span>
+            <span>本科</span>
+            <span>本科及以上</span>
+            <input type="hidden" class="user-con" value="专科以下">
+          </div>
+
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>毕业年限</p>
+            <span class="active">1-3年</span>
+            <span>3-5年</span>
+            <span>5-10年</span>
+            <span>10年以上</span>
+            <input type="hidden" class="user-con" value="1-3年">
+          </div>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>公司属性</p>
+            <span class="active">国有企业</span>
+            <span>民营企业</span>
+            <span>外资企业</span>
+            <span>其他</span>
+            <input type="hidden" class="user-con" value="国有企业">
+          </div>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>学习目的</p>
+            <span class="active">工作需求</span>
+            <span>管理经验</span>
+            <span>自我提升</span>
+            <span>人脉拓展</span>
+            <input type="hidden" class="user-con" value="工作需求">
+          </div>
+
+        </li>
+        <form class="sign-in">
+          <input type="hidden" class="user-name" value="佚名" placeholder="">
+          <input type="text" class="user-tel" placeholder="请输入您的手机号/微信号">
+          <input type="hidden" id="inviteData" class="user-con"
+                 value=" 、高中（中专、职校、技校）及以下、应届毕业生、国有企业、总监、全日制研究生、学历学位">
+          <input class="submit" type="submit" value="获取结果">
+        </form>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
