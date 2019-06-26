@@ -1,715 +1,164 @@
 @charset "UTF-8";
-a {
-  color: #313131;
-}
+li { list-style: none; }
 
-a:hover {
-  color: #af1b40;
-}
+img { max-width: 100%; border: none; margin: 0; padding: 0; }
 
-li {
-  list-style: none;
-}
+i { font-style: normal; display: inline-block; }
 
-img {
-  max-width: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
+h1, h2, h3, h4, p { margin: 0; padding: 0; *margin-top: 0; }
 
-i {
-  font-style: normal;
-  display: inline-block;
-}
+a { cursor: pointer; text-decoration: none; font-size: inherit; color: inherit; }
 
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-  padding: 0;
-  *margin-top: 0;
-}
+.audition .audition-from .education-replace { display: inline-block; *zoom: 1; *display: inline; }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-  font-size: inherit;
-  color: inherit;
-}
+.appraisal .appraisal-data .appraisal-form, .audition, .audition .degree .reap, .invite-popup .invite-data ul li, .invite-popup .invite-data .invite-form { zoom: 1; }
 
-.audition-pc .sign-in .education-replace, .audition-wap .sign-in .education-wap-replace {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
-}
+.appraisal .appraisal-data .appraisal-form:after, .audition:after, .audition .degree .reap:after, .invite-popup .invite-data ul li:after, .invite-popup .invite-data .invite-form:after { clear: both; }
 
-.appraisal .appraisal-data .sign-in, .audition-pc .degree .reap, .invite-popup .invite-data ul li, .invite-popup .invite-data .sign-in {
-  zoom: 1;
-}
+.appraisal .appraisal-data .appraisal-form:before, .audition:before, .audition .degree .reap:before, .invite-popup .invite-data ul li:before, .invite-popup .invite-data .invite-form:before, .appraisal .appraisal-data .appraisal-form:after, .audition:after, .audition .degree .reap:after, .invite-popup .invite-data ul li:after, .invite-popup .invite-data .invite-form:after { content: ""; display: table; }
 
-.appraisal .appraisal-data .sign-in:after, .audition-pc .degree .reap:after, .invite-popup .invite-data ul li:after, .invite-popup .invite-data .sign-in:after {
-  clear: both;
-}
+input[type="text"], input[type='radio'], select { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
 
-.appraisal .appraisal-data .sign-in:before, .audition-pc .degree .reap:before, .invite-popup .invite-data ul li:before, .invite-popup .invite-data .sign-in:before, .appraisal .appraisal-data .sign-in:after, .audition-pc .degree .reap:after, .invite-popup .invite-data ul li:after, .invite-popup .invite-data .sign-in:after {
-  content: "";
-  display: table;
-}
+input[type="text"]::-webkit-input-placeholder, input[type='radio']::-webkit-input-placeholder, select::-webkit-input-placeholder { color: #999; font-size: inherit; }
 
-input[type="text"],
-input[type='radio'],
-select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
+input[type="text"]:-moz-placeholder, input[type='radio']:-moz-placeholder, select:-moz-placeholder { color: #999; font-size: inherit; }
 
-input[type="text"]::-webkit-input-placeholder,
-input[type='radio']::-webkit-input-placeholder,
-select::-webkit-input-placeholder {
-  color: #999;
-  font-size: inherit;
-}
+input[type="text"]::-moz-placeholder, input[type='radio']::-moz-placeholder, select::-moz-placeholder { color: #999; font-size: inherit; }
 
-input[type="text"]:-moz-placeholder,
-input[type='radio']:-moz-placeholder,
-select:-moz-placeholder {
-  color: #999;
-  font-size: inherit;
-}
+input[type="text"]:-ms-input-placeholder, input[type='radio']:-ms-input-placeholder, select:-ms-input-placeholder { color: #999; font-size: inherit; }
 
-input[type="text"]::-moz-placeholder,
-input[type='radio']::-moz-placeholder,
-select::-moz-placeholder {
-  color: #999;
-  font-size: inherit;
-}
+input[type="submit"] { cursor: pointer; }
 
-input[type="text"]:-ms-input-placeholder,
-input[type='radio']:-ms-input-placeholder,
-select:-ms-input-placeholder {
-  color: #999;
-  font-size: inherit;
-}
+input, textarea, select { background-color: transparent; font-family: '微软雅黑'; }
 
-input[type="submit"] {
-  cursor: pointer;
-}
+select { border: none; text-indent: 1em; }
 
-input,
-textarea,
-select {
-  background-color: transparent;
-  font-family: '微软雅黑';
-}
+option { text-indent: 19px; font-family: '微软雅黑'; }
 
-select {
-  border: none;
-  text-indent: 1em;
-}
-
-option {
-  text-indent: 19px;
-  font-family: '微软雅黑';
-}
-
-input[type='text'],
-select {
-  border: none;
-  text-indent: 1em;
-}
-
-input[type="submit"] {
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  background-size: 100% auto;
-  border-radius: 3px;
-  text-align: center;
-}
+input[type='text'], select { border: none; text-indent: 1em; }
 
 /* 测评模块 */
-.appraisal {
-  width: 740px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 20px 0 rgba(176, 179, 184, 0.45);
-          box-shadow: 0 0 20px 0 rgba(176, 179, 184, 0.45);
-  border-radius: 0 0 60px 60px;
-  margin: 130px auto 10px;
-  border-top: 1px solid transparent;
-  padding-bottom: 33px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: none;
-}
+.appraisal { width: 9.86667rem; background-color: #ffffff; -webkit-box-shadow: 0 0 0.26667rem 0 rgba(176, 179, 184, 0.45); box-shadow: 0 0 0.26667rem 0 rgba(176, 179, 184, 0.45); border-radius: 0 0 0.8rem 0.8rem; margin: 1.73333rem auto 0.13333rem; border-top: 1px solid transparent; padding-bottom: 0.44rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.appraisal .top {
-  height: 240px;
-  margin-top: -120px;
-  position: relative;
-}
+.appraisal .top { height: 3.2rem; margin-top: -1.6rem; position: relative; }
 
-.appraisal .top img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+.appraisal .top img { position: absolute; top: 0; left: 0; width: 100%; }
 
-.appraisal .top .text {
-  position: absolute;
-  top: 195px;
-  left: 136px;
-  font-size: 14px;
-  color: #f2f2f2;
-}
+.appraisal .top .text { position: absolute; top: 2.6rem; left: 1.81333rem; font-size: 0.18667rem; color: #f2f2f2; }
 
-.appraisal .top .text span {
-  color: #fdff5b;
-}
+.appraisal .top .text span { color: #fdff5b; }
 
-.appraisal .appraisal-data {
-  width: 100%;
-  margin-bottom: 28px;
-}
+.appraisal .appraisal-data { width: 100%; margin-bottom: 0.37333rem; }
 
-.appraisal .appraisal-data ul {
-  padding-top: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+.appraisal .appraisal-data ul { padding-top: 0.26667rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.appraisal .appraisal-data ul li {
-  margin: 10px 10px 18px 40px;
-}
+.appraisal .appraisal-data ul li { margin: 0.13333rem 0.13333rem 0.24rem 0.53333rem; }
 
-.appraisal .appraisal-data ul li p {
-  margin-bottom: 30px;
-  margin-top: 2px;
-  margin-left: -1px;
-  font-size: 16px;
-  color: #333333;
-}
+.appraisal .appraisal-data ul li p { margin-bottom: 0.4rem; margin-top: 0.02667rem; margin-left: -1px; font-size: 0.21333rem; color: #333333; }
 
-.appraisal .appraisal-data ul li p input {
-  width: 102px;
-  height: 30px;
-  border-radius: 4px;
-  border: solid 1px #dddddd;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 1em;
-  margin-right: 1em;
-}
+.appraisal .appraisal-data ul li p input { width: 1.36rem; height: 0.4rem; border-radius: 0.05333rem; border: solid 1px #dddddd; -webkit-box-sizing: border-box; box-sizing: border-box; margin-left: 1em; margin-right: 1em; }
 
-.appraisal .appraisal-data ul li span {
-  display: inline-block;
-  min-width: 146px;
-  position: relative;
-  margin-bottom: 22px;
-  padding-left: 29px;
-  cursor: pointer;
-  font-size: 14px;
-  height: 14px;
-  line-height: 14px;
-  color: #666666;
-  padding-right: 24px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+.appraisal .appraisal-data ul li span { display: inline-block; min-width: 1.94667rem; position: relative; margin-bottom: 0.29333rem; padding-left: 0.38667rem; cursor: pointer; font-size: 0.18667rem; height: 0.18667rem; line-height: 0.18667rem; color: #666666; padding-right: 0.32rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.appraisal .appraisal-data ul li span:before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 100%;
-  background-color: #fff;
-  border: 1px solid #333333;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  vertical-align: text-top;
-}
+.appraisal .appraisal-data ul li span:before { content: ""; width: 0.18667rem; height: 0.18667rem; position: absolute; left: 0; top: 0; border-radius: 100%; background-color: #fff; border: 1px solid #333333; -webkit-box-sizing: border-box; box-sizing: border-box; vertical-align: text-top; }
 
-.appraisal .appraisal-data ul li span:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  border-radius: 100%;
-}
+.appraisal .appraisal-data ul li span:after { content: ""; width: 0.10667rem; height: 0.10667rem; position: absolute; top: 0.04rem; left: 0.04rem; border-radius: 100%; }
 
-.appraisal .appraisal-data ul li span.active:before {
-  border: 1px solid #d92912;
-}
+.appraisal .appraisal-data ul li span.active:before { border: 1px solid #d92912; }
 
-.appraisal .appraisal-data ul li span.active:after {
-  background-color: #d92912;
-}
+.appraisal .appraisal-data ul li span.active:after { background-color: #d92912; }
 
-.appraisal .appraisal-data .sign-in {
-  margin-left: 40px;
-  margin-right: 40px;
-  border-top: 1px dashed #dddddd;
-  padding-top: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+.appraisal .appraisal-data .appraisal-form { margin-left: 0.53333rem; margin-right: 0.53333rem; border-top: 1px dashed #dddddd; padding-top: 0.4rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.appraisal .appraisal-data .sign-in input {
-  float: left;
-  width: 240px;
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid #aaa;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  font-size: 14px;
-  outline: none;
-  margin-right: 10px;
-}
+.appraisal .appraisal-data .appraisal-form input { float: left; width: 3.2rem; height: 0.53333rem; line-height: 0.53333rem; border: 1px solid #aaa; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0.05333rem; font-size: 0.18667rem; outline: none; margin-right: 0.13333rem; }
 
-.appraisal .appraisal-data .sign-in .submit {
-  width: 160px;
-  height: 40px;
-  background-color: #d92912;
-  border-radius: 20px;
-  border: none;
-  margin-right: 0;
-}
+.appraisal .appraisal-data .appraisal-form .submit { width: 2.13333rem; height: 0.53333rem; background-color: #d92912; border-radius: 0.26667rem; border: none; margin-right: 0; color: #ffffff; }
 
-.appraisal .hint {
-  font-size: 14px;
-  line-height: 14px;
-  color: #333333;
-  text-align: center;
-}
+.appraisal .hint { font-size: 0.18667rem; line-height: 0.18667rem; color: #333333; text-align: center; }
 
-/* 试听模块-pc */
-.audition-pc {
-  width: 740px;
-  height: 240px;
-  margin: 10px auto;
-  position: relative;
-  display: none;
-}
+/* 试听模块 */
+.audition { width: 9.86667rem; margin: 0.13333rem auto; background: url("../images/audition-pc.png") no-repeat; background-size: 100% 100%; padding-bottom: 0.25333rem; }
 
-.audition-pc .pc-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+.audition .degree { width: 5.12rem; height: 2.8rem; padding-top: 0.64rem; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; float: left; margin-left: 0.28rem; }
 
-.audition-pc .degree {
-  width: 384px;
-  height: 210px;
-  padding-top: 48px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 21px;
-  text-align: center;
-}
+.audition .degree .title { font-size: 0.37333rem; line-height: 0.42667rem; color: #ffffff; font-weight: bold; }
 
-.audition-pc .degree .title {
-  font-size: 28px;
-  line-height: 32px;
-  color: #ffffff;
-  font-weight: bold;
-}
+.audition .degree .reap { width: 2.66667rem; margin-top: 0.32rem; margin-left: auto; margin-right: auto; }
 
-.audition-pc .degree .reap {
-  width: 200px;
-  margin-top: 24px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.audition .degree .reap span { display: block; width: 1.2rem; height: 0.42667rem; line-height: 0.42667rem; border-radius: 0.08rem; border: dashed 1px #ffffff; -webkit-box-sizing: border-box; box-sizing: border-box; color: #ffffff; float: left; margin-right: 0.13333rem; margin-bottom: 0.13333rem; font-size: 0.21333rem; }
 
-.audition-pc .degree .reap span {
-  display: block;
-  width: 90px;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 6px;
-  border: dashed 1px #ffffff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #ffffff;
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
+.audition .audition-from { width: 3.33333rem; float: right; margin-top: 0.38667rem; margin-right: 0.50667rem; }
 
-.audition-pc .sign-in {
-  width: 250px;
-  position: absolute;
-  top: 29px;
-  right: 38px;
-}
+.audition .audition-from input { width: 3.33333rem; height: 0.50667rem; line-height: 0.50667rem; background-color: #ffffff; border-radius: 0.05333rem; border: solid 1px #dddddd; -webkit-box-sizing: border-box; box-sizing: border-box; margin-bottom: 0.13333rem; }
 
-.audition-pc .sign-in input {
-  width: 250px;
-  height: 38px;
-  line-height: 38px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  border: solid 1px #dddddd;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 10px;
-}
+.audition .audition-from .education { display: none; }
 
-.audition-pc .sign-in .education {
-  display: none;
-}
+.audition .audition-from .education-replace { overflow: visible; position: relative; width: 3.33333rem; height: 0.53333rem; line-height: 0.53333rem; margin-right: 0.66667rem; margin-bottom: 0.13333rem; }
 
-.audition-pc .sign-in .education-replace {
-  overflow: visible;
-  position: relative;
-  width: 250px;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 50px;
-  margin-bottom: 10px;
-}
+.audition .audition-from .education-replace .current-education { width: 100%; height: 0.53333rem; line-height: 0.53333rem; -webkit-box-sizing: border-box; box-sizing: border-box; color: #888888; outline: none; margin-bottom: 0; cursor: pointer; border: solid 1px #dddddd; border-radius: 0.05333rem; background: url("../images/triangle-pc.png") #ffffff no-repeat 96% center; }
 
-.audition-pc .sign-in .education-replace .current-education {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #888888;
-  outline: none;
-  margin-bottom: 0;
-  cursor: pointer;
-  border: solid 1px #dddddd;
-  border-radius: 4px;
-  background: url("../images/triangle-pc.png") #ffffff no-repeat 96% center;
-}
+.audition .audition-from .education-replace .education-options { display: none; position: absolute; z-index: 10; cursor: pointer; border-radius: 0.05333rem; background-color: #ffffff; }
 
-.audition-pc .sign-in .education-replace .education-options {
-  display: none;
-  position: absolute;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: #ffffff;
-}
+.audition .audition-from .education-replace .education-options li { width: 3.33333rem; padding-left: 1em; -webkit-box-sizing: border-box; box-sizing: border-box; border-left: 1px solid #a0a0a0; border-right: 1px solid #a0a0a0; text-align: left; color: #888888; }
 
-.audition-pc .sign-in .education-replace .education-options li {
-  width: 250px;
-  padding-left: 1em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-left: 1px solid #a0a0a0;
-  border-right: 1px solid #a0a0a0;
-  text-align: left;
-  color: #888888;
-}
+.audition .audition-from .education-replace .education-options li:hover { background-color: #f3461e; border-left: 1px solid #f3461e; border-right: 1px solid #f3461e; color: #ffffff; }
 
-.audition-pc .sign-in .education-replace .education-options li:hover {
-  background-color: #f3461e;
-  border-left: 1px solid #f3461e;
-  border-right: 1px solid #f3461e;
-  color: #ffffff;
-}
-
-.audition-pc .sign-in .submit {
-  background-color: #f3461e;
-  border-radius: 4px;
-  border: none;
-  font-size: 16px;
-}
-
-/* 试听模块-wap */
-.audition-wap {
-  max-width: 10rem;
-  height: 8.53333rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.26667rem;
-  background: url("../images/audition-wap.png") no-repeat;
-  display: none;
-}
-
-.audition-wap .degree {
-  width: 9.26667rem;
-  height: 2.52rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 0.45333rem;
-  padding-bottom: 0.54667rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.audition-wap .degree .title {
-  font-size: 0.64rem;
-  line-height: 0.64rem;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.audition-wap .degree .reap {
-  width: 7.53333rem;
-  margin-top: 0.32rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.audition-wap .degree .reap span {
-  display: block;
-  width: 1.73333rem;
-  height: 0.56rem;
-  line-height: 0.56rem;
-  border-radius: 0.08rem;
-  font-size: 0.34667rem;
-  border: dashed 1px #ffffff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #ffffff;
-}
-
-.audition-wap .sign-in {
-  width: 8rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.66667rem;
-}
-
-.audition-wap .sign-in input {
-  width: 100%;
-  height: 0.93333rem;
-  line-height: 0.93333rem;
-  background-color: #ffffff;
-  border-radius: 0.08rem;
-  border: solid 1px #dddddd;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 0.26667rem;
-  font-size: 0.37333rem;
-}
-
-.audition-wap .sign-in .education-wap {
-  display: none;
-}
-
-.audition-wap .sign-in .education-wap-replace {
-  overflow: visible;
-  position: relative;
-  width: 100%;
-  height: 0.93333rem;
-  line-height: 0.93333rem;
-  margin-right: 0.66667rem;
-  margin-bottom: 0.26667rem;
-}
-
-.audition-wap .sign-in .education-wap-replace .current-wap-education {
-  width: 100%;
-  height: 0.93333rem;
-  line-height: 0.93333rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #999999;
-  outline: none;
-  margin-bottom: 0;
-  cursor: pointer;
-  border: solid 1px #dddddd;
-  border-radius: 4px;
-  background: url("../images/triangle-wap.png") #ffffff no-repeat 88% center;
-  font-size: 0.37333rem;
-}
-
-.audition-wap .sign-in .education-wap-replace .education-wap-options {
-  display: none;
-  position: absolute;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 0.08rem;
-  background-color: #ffffff;
-  font-size: 0.37333rem;
-}
-
-.audition-wap .sign-in .education-wap-replace .education-wap-options li {
-  width: 8rem;
-  padding-left: 1em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-left: 1px solid #a0a0a0;
-  border-right: 1px solid #a0a0a0;
-  text-align: left;
-  color: #999999;
-}
-
-.audition-wap .sign-in .education-wap-replace .education-wap-options li:hover {
-  background-color: #f3461e;
-  border-left: 1px solid #f3461e;
-  border-right: 1px solid #f3461e;
-  color: #ffffff;
-}
-
-.audition-wap .sign-in .submit {
-  background-color: #f3461e;
-  border-radius: 0.13333rem;
-  font-size: 0.37333rem;
-  border: none;
-}
+.audition .audition-from .submit { background-color: #f3461e; border-radius: 0.05333rem; border: none; font-size: 0.21333rem; color: #ffffff; }
 
 /* 邀请弹窗 */
-.invite-popup {
-  width: 8rem;
-  height: 4.66667rem;
-  background: url("../images/invite-popup.png") no-repeat;
-  background-size: 100% 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.26667rem;
-}
+.invite-popup { width: 8rem; height: 4.66667rem; background: url("../images/invite-popup.png") no-repeat; background-size: 100% 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 
-.invite-popup .close {
-  display: block;
-  width: 0.24rem;
-  height: 0.24rem;
-  float: right;
-  background: url("../images/close.png") no-repeat;
-  background-size: 100% 100%;
-  margin-top: 6px;
-  margin-right: 6px;
-  cursor: pointer;
-}
+.invite-popup .close { display: block; width: 0.24rem; height: 0.24rem; float: right; background: url("../images/close.png") no-repeat; background-size: 100% 100%; margin-top: 0.08rem; margin-right: 0.08rem; cursor: pointer; }
 
-.invite-popup .invite-data {
-  width: 6rem;
-  height: 4.17333rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0 0.05333rem 0.17333rem 0 rgba(0, 0, 0, 0.83);
-          box-shadow: 0 0.05333rem 0.17333rem 0 rgba(0, 0, 0, 0.83);
-  border-radius: 0.26667rem 0.26667rem 0 0.26667rem;
-  float: right;
-  margin-top: 0.25333rem;
-  margin-right: 0.08rem;
-}
+.invite-popup .invite-data { width: 6rem; height: 4.17333rem; background-color: rgba(255, 255, 255, 0.9); -webkit-box-shadow: 0 0.05333rem 0.17333rem 0 rgba(0, 0, 0, 0.83); box-shadow: 0 0.05333rem 0.17333rem 0 rgba(0, 0, 0, 0.83); border-radius: 0.26667rem 0.26667rem 0 0.26667rem; float: right; position: absolute; top: 0; bottom: 0; right: 0.37333rem; margin: auto; }
 
-.invite-popup .invite-data ul {
-  padding-top: 0.26667rem;
-  padding-left: 0.4rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+.invite-popup .invite-data ul { padding-top: 0.26667rem; padding-left: 0.4rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.invite-popup .invite-data ul li .icon {
-  display: block;
-  width: 0.18667rem;
-  height: 0.16rem;
-  background: url("../images/invite-popup-icon.png") no-repeat;
-  background-size: 100% 100%;
-  margin-right: 0.10667rem;
-  float: left;
-}
+.invite-popup .invite-data ul li .icon { display: block; width: 0.18667rem; height: 0.16rem; background: url("../images/invite-popup-icon.png") no-repeat; background-size: 100% 100%; margin-right: 0.10667rem; float: left; }
 
-.invite-popup .invite-data ul li .detail {
-  float: left;
-  width: 5.16rem;
-  color: #333333;
-}
+.invite-popup .invite-data ul li .detail { float: left; width: 5.16rem; color: #333333; }
 
-.invite-popup .invite-data ul li .detail p {
-  font-size: 0.21333rem;
-  line-height: 0.21333rem;
-  margin-bottom: 0.16rem;
-}
+.invite-popup .invite-data ul li .detail p { font-size: 0.21333rem; line-height: 0.21333rem; margin-bottom: 0.16rem; }
 
-.invite-popup .invite-data ul li .detail span {
-  display: block;
-  float: left;
-  min-width: 1.26667rem;
-  position: relative;
-  margin-bottom: 0.26667rem;
-  padding-left: 0.29333rem;
-  cursor: pointer;
-  font-size: 0.18667rem;
-  height: 0.18667rem;
-  line-height: 0.18667rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+.invite-popup .invite-data ul li .detail span { display: block; float: left; min-width: 1.26667rem; position: relative; margin-bottom: 0.26667rem; padding-left: 0.29333rem; cursor: pointer; font-size: 0.18667rem; height: 0.18667rem; line-height: 0.18667rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.invite-popup .invite-data ul li .detail span:before {
-  content: "";
-  width: 0.21333rem;
-  height: 0.21333rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 100%;
-  background-color: #fff;
-  border: 1px solid #999999;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  vertical-align: text-top;
-}
+.invite-popup .invite-data ul li .detail span:before { content: ""; width: 0.21333rem; height: 0.21333rem; position: absolute; left: 0; top: 0; border-radius: 100%; background-color: #fff; border: 1px solid #999999; -webkit-box-sizing: border-box; box-sizing: border-box; vertical-align: text-top; }
 
-.invite-popup .invite-data ul li .detail span:after {
-  content: "";
-  width: 0.13333rem;
-  height: 0.13333rem;
-  position: absolute;
-  top: 0.04rem;
-  left: 0.04rem;
-  border-radius: 100%;
-}
+.invite-popup .invite-data ul li .detail span:after { content: ""; width: 0.13333rem; height: 0.13333rem; position: absolute; top: 0.04rem; left: 0.04rem; border-radius: 100%; }
 
-.invite-popup .invite-data ul li .detail span.active:before {
-  border: 1px solid #999999;
-}
+.invite-popup .invite-data ul li .detail span.active:before { border: 1px solid #999999; }
 
-.invite-popup .invite-data ul li .detail span.active:after {
-  background-color: #d92912;
-}
+.invite-popup .invite-data ul li .detail span.active:after { background-color: #d92912; }
 
-.invite-popup .invite-data .sign-in input {
-  float: left;
-  width: 3.33333rem;
-  height: 0.50667rem;
-  line-height: 0.50667rem;
-  border: 1px solid #bbbbbb;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 0.10667rem;
-  font-size: 0.18667rem;
-  outline: none;
-  margin-right: 0.13333rem;
-  background-color: #ffffff;
-}
+.invite-popup .invite-data .invite-form input { float: left; width: 3.33333rem; height: 0.50667rem; line-height: 0.50667rem; border: 1px solid #bbbbbb; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0.10667rem; font-size: 0.18667rem; outline: none; margin-right: 0.13333rem; background-color: #ffffff; }
 
-.invite-popup .invite-data .sign-in input.user-tel {
-  background: url("../images/star.png") no-repeat 5% center;
-  text-indent: 2em;
-}
+.invite-popup .invite-data .invite-form input.user-tel { background: url("../images/star.png") no-repeat 5% center; text-indent: 2em; }
 
-.invite-popup .invite-data .sign-in .submit {
-  width: 1.81333rem;
-  height: 0.50667rem;
-  background-color: #d92912;
-  border-radius: 0.10667rem;
-  border: none;
-  margin-right: 0;
-}
+.invite-popup .invite-data .invite-form .submit { width: 1.81333rem; height: 0.50667rem; background-color: #d92912; border-radius: 0.10667rem; border: none; margin-right: 0; color: #ffffff; }
+
+@media screen and (max-width: 750px) { /* 测评模块 */
+  .appraisal .appraisal-data ul li p { font-size: 0.32rem; }
+  .appraisal .appraisal-data ul li span { font-size: 0.26667rem; }
+  .appraisal .appraisal-data .appraisal-form input { font-size: 0.26667rem; }
+  .appraisal .hint { font-size: 0.26667rem; line-height: 0.26667rem; }
+  /* 试听模块 */
+  .audition { max-width: 10rem; background: url("../images/audition-wap.png") no-repeat; background-size: 100% 100%; }
+  .audition .degree { width: 100%; height: 2.52rem; margin-left: auto; margin-right: auto; text-align: center; padding-top: 0.45333rem; padding-bottom: 0.54667rem; margin-bottom: 0.66667rem; }
+  .audition .degree .title { font-size: 0.64rem; line-height: 0.64rem; }
+  .audition .degree .reap { width: 7.53333rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  .audition .degree .reap span { width: 1.73333rem; height: 0.56rem; line-height: 0.56rem; font-size: 0.34667rem; float: none; }
+  .audition .audition-from { width: 8rem; margin-left: auto; margin-right: auto; margin-top: 0.66667rem; float: none; }
+  .audition .audition-from input { width: 100%; height: 0.93333rem; line-height: 0.93333rem; border-radius: 0.08rem; margin-bottom: 0.26667rem; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace { width: 100%; height: 0.93333rem; line-height: 0.93333rem; margin-right: 0.66667rem; margin-bottom: 0.26667rem; }
+  .audition .audition-from .education-replace .current-education { height: 0.93333rem; line-height: 0.93333rem; color: #999999; background: url("../images/triangle-wap.png") #ffffff no-repeat 88% center; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace .education-options { border-radius: 0.08rem; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace .education-options li { width: 8rem; color: #999999; }
+  .audition .audition-from .submit { border-radius: 0.13333rem; font-size: 0.37333rem; }
+  /* 邀请弹窗 */
+  .invite-popup { width: 9.33333rem; height: 6.4rem; }
+  .invite-popup .close { width: 0.26667rem; height: 0.26667rem; margin-top: 0.13333rem; margin-right: 0.13333rem; }
+  .invite-popup .invite-data { width: 7.33333rem; height: 5.09333rem; right: 0.29333rem; }
+  .invite-popup .invite-data ul li .detail p { font-size: 0.26667rem; line-height: 0.26667rem; }
+  .invite-popup .invite-data ul li .detail span { font-size: 0.24rem; }
+  .invite-popup .invite-data .invite-form input { width: 3.6rem; font-size: 0.24rem; }
+  .invite-popup .invite-data .invite-form .submit { width: 2rem; } }

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 邀请弹窗 */
+.invite-popup .invite-data ul li, .invite-popup .invite-data .invite-form { zoom: 1; }
+
+.invite-popup .invite-data ul li:after, .invite-popup .invite-data .invite-form:after { clear: both; }
+
+.invite-popup .invite-data ul li:before, .invite-popup .invite-data .invite-form:before, .invite-popup .invite-data ul li:after, .invite-popup .invite-data .invite-form:after { content: ""; display: table; }
+
+.invite-popup { width: 600px; height: 350px; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/invite-popup.png") no-repeat; background-size: 100% 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; display: none; z-index: 300; }
+
+.invite-popup .close { display: block; width: 18px; height: 18px; float: right; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/close.png") no-repeat; background-size: 100% 100%; margin-top: 6px; margin-right: 6px; cursor: pointer; }
+
+.invite-popup .invite-data { width: 450px; height: 313px; background-color: rgba(255, 255, 255, 0.9); -webkit-box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.83); box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.83); border-radius: 20px 20px 0 20px; float: right; position: absolute; top: 0; bottom: 0; right: 28px; margin: auto; }
+
+.invite-popup .invite-data ul { padding-top: 20px; padding-left: 30px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.invite-popup .invite-data ul li .icon { display: block; width: 14px; height: 12px; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/invite-popup-icon.png") no-repeat; background-size: 100% 100%; margin-right: 8px; float: left; }
+
+.invite-popup .invite-data ul li .detail { float: left; width: 387px; color: #333333; }
+
+.invite-popup .invite-data ul li .detail p { font-size: 16px; line-height: 16px; margin-bottom: 12px; }
+
+.invite-popup .invite-data ul li .detail span { display: block; float: left; min-width: 95px; position: relative; margin-bottom: 20px; padding-left: 22px; cursor: pointer; font-size: 14px; height: 14px; line-height: 14px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.invite-popup .invite-data ul li .detail span:before { content: ""; width: 16px; height: 16px; position: absolute; left: 0; top: 0; border-radius: 100%; background-color: #fff; border: 1px solid #999999; -webkit-box-sizing: border-box; box-sizing: border-box; vertical-align: text-top; }
+
+.invite-popup .invite-data ul li .detail span:after { content: ""; width: 10px; height: 10px; position: absolute; top: 3px; left: 3px; border-radius: 100%; }
+
+.invite-popup .invite-data ul li .detail span.active:before { border: 1px solid #999999; }
+
+.invite-popup .invite-data ul li .detail span.active:after { background-color: #d92912; }
+
+.invite-popup .invite-data .invite-form input { float: left; width: 250px; height: 38px; line-height: 38px; border: 1px solid #bbbbbb; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 8px; font-size: 14px; outline: none; margin-right: 10px; background-color: #ffffff; }
+
+.invite-popup .invite-data .invite-form input.user-tel { background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/star.png") no-repeat 5% center; text-indent: 2em; }
+
+.invite-popup .invite-data .invite-form .submit { width: 136px; height: 38px; background-color: #d92912; border-radius: 8px; border: none; margin-right: 0; color: #ffffff; cursor: pointer; }
+
+@media screen and (max-width: 750px) { /* 邀请弹窗 */
+  .invite-popup { width: 9.33333rem; height: 6.4rem; }
+  .invite-popup .close { width: 0.26667rem; height: 0.26667rem; margin-top: 0.13333rem; margin-right: 0.13333rem; }
+  .invite-popup .invite-data { width: 7.33333rem; height: 5.09333rem; right: 0.29333rem; }
+  .invite-popup .invite-data ul li .detail p { font-size: 0.26667rem; line-height: 0.26667rem; }
+  .invite-popup .invite-data ul li .detail span { font-size: 0.24rem; }
+  .invite-popup .invite-data .invite-form input { width: 3.6rem; font-size: 0.24rem; }
+  .invite-popup .invite-data .invite-form .submit { width: 2rem; } }

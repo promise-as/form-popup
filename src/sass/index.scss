@@ -1,16 +1,6 @@
-$txt-color: #313131;
-$bg-color: #af1b40;
 $browser-default-font-size: 75px!default;
 @function pr($px){
   @return $px / $browser-default-font-size * 1rem;
-}
-
-a {
-  color: $txt-color;
-
-  &:hover {
-    color: $bg-color;
-  }
 }
 
 li {
@@ -128,44 +118,34 @@ select {
   text-indent: 1em;
 }
 
-input[type="submit"] {
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  //background: url(../images/submit.png) repeat-y;
-  background-size: 100% auto;
-  border-radius: 3px;
-  text-align: center;
-}
-
 /* 测评模块 */
 .appraisal {
-  width: 740px;
+  width: pr(740px);
   background-color: #ffffff;
-  box-shadow: 0 0 20px 0 rgba(176, 179, 184, 0.45);
-  border-radius: 0 0 60px 60px;
-  margin: 130px auto 10px; // 居中
+  box-shadow: 0 0 pr(20px) 0 rgba(176, 179, 184, 0.45);
+  border-radius: 0 0 pr(60px) pr(60px);
+  margin: pr(130px) auto pr(10px); // 居中
   border-top: 1px solid transparent; // 解决 margin-top 塌陷
-  padding-bottom: 33px;
+  padding-bottom: pr(33px);
   box-sizing: border-box;
-  display: none;
+  //display: none;
   .top {
-    height: 240px;
-    margin-top: -120px;
+    height: pr(240px);
+    margin-top: pr(-120px);
     position: relative;
 
     img {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
     }
 
     .text {
       position: absolute;
-      top: 195px;
-      left: 136px;
-      font-size: 14px;
+      top: pr(195px);
+      left: pr(136px);
+      font-size: pr(14px);
       color: #f2f2f2;
 
       span {
@@ -176,22 +156,22 @@ input[type="submit"] {
   .appraisal-data {
     width: 100%;
     //height: 1120px;
-    margin-bottom: 28px;
+    margin-bottom: pr(28px);
     ul {
-      padding-top: 20px;
+      padding-top: pr(20px);
       box-sizing: border-box;
       li {
-        margin: 10px 10px 18px 40px;
+        margin: pr(10px) pr(10px) pr(18px) pr(40px);
         p {
-          margin-bottom: 30px;
-          margin-top: 2px;
+          margin-bottom: pr(30px);
+          margin-top: pr(2px);
           margin-left: -1px;
-          font-size: 16px;
+          font-size: pr(16px);
           color: #333333;
           input{
-            width: 102px;
-            height: 30px;
-            border-radius: 4px;
+            width: pr(102px);
+            height: pr(30px);
+            border-radius: pr(4px);
             border: solid 1px #dddddd;
             box-sizing: border-box;
             margin-left: 1em;
@@ -200,21 +180,21 @@ input[type="submit"] {
         }
         span {
           display: inline-block;
-          min-width: 146px;
+          min-width: pr(146px);
           position: relative;
-          margin-bottom: 22px;
-          padding-left: 29px;
+          margin-bottom: pr(22px);
+          padding-left: pr(29px);
           cursor: pointer;
-          font-size: 14px;
-          height: 14px;
-          line-height: 14px;
+          font-size: pr(14px);
+          height: pr(14px);
+          line-height: pr(14px);
           color: #666666;
-          padding-right: 24px;
+          padding-right: pr(24px);
           box-sizing: border-box;
           &:before {
             content: "";
-            width: 14px;
-            height: 14px;
+            width: pr(14px);
+            height: pr(14px);
             position: absolute;
             left: 0;
             top: 0;
@@ -226,11 +206,11 @@ input[type="submit"] {
           }
           &:after{
             content: "";
-            width: 8px;
-            height: 8px;
+            width: pr(8px);
+            height: pr(8px);
             position: absolute;
-            top: 3px;
-            left: 3px;
+            top: pr(3px);
+            left: pr(3px);
             border-radius: 100%;
           }
           &.active{
@@ -244,106 +224,104 @@ input[type="submit"] {
         }
       }
     }
-    .sign-in {
-      margin-left: 40px;
-      margin-right: 40px;
+    .appraisal-form {
+      margin-left: pr(40px);
+      margin-right: pr(40px);
       border-top: 1px dashed #dddddd;
-      padding-top: 30px;
+      padding-top: pr(30px);
       box-sizing: border-box;
       @extend %clearfix;
       input {
         float: left;
-        width: 240px;
-        height: 40px;
-        line-height: 40px;
+        width: pr(240px);
+        height: pr(40px);
+        line-height: pr(40px);
         border: 1px solid #aaa;
         box-sizing: border-box;
-        border-radius: 4px;
-        font-size: 14px;
+        border-radius: pr(4px);
+        font-size: pr(14px);
         outline: none;
-        margin-right: 10px;
+        margin-right: pr(10px);
       }
       .submit{
-        width: 160px;
-        height: 40px;
+        width: pr(160px);
+        height: pr(40px);
         background-color: #d92912;
-        border-radius: 20px;
+        border-radius: pr(20px);
         border: none;
         margin-right: 0;
+        color: #ffffff;
       }
     }
   }
   .hint{
-    font-size: 14px;
-    line-height: 14px;
+    font-size: pr(14px);
+    line-height: pr(14px);
     color: #333333;
     text-align: center;
   }
 }
 
-/* 试听模块-pc */
-.audition-pc{
-  width: 740px;
-  height: 240px;
-  margin: 10px auto;
-  position: relative;
-  display: none;
-  .pc-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+/* 试听模块 */
+.audition{
+  width: pr(740px);
+  //height: 240px;
+  margin: pr(10px) auto;
+  background: url("../images/audition-pc.png") no-repeat;
+  background-size: 100% 100%;
+  @extend %clearfix;
+  padding-bottom: pr(19px);
+  //display: none;
   .degree{
-    width: 384px;
-    height: 210px;
-    padding-top: 48px;
+    width: pr(384px);
+    height: pr(210px);
+    padding-top: pr(48px);
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 21px;
     text-align: center;
+    float: left;
+    margin-left: pr(21px);
     .title{
-      font-size: 28px;
-      line-height: 32px;
+      font-size: pr(28px);
+      line-height: pr(32px);
       color: #ffffff;
       font-weight: bold;
     }
     .reap{
-      width: 200px;
-      margin-top: 24px;
+      width: pr(200px);
+      margin-top: pr(24px);
       margin-left: auto;
       margin-right: auto;
       @extend %clearfix;
       span{
         display: block;
-        width: 90px;
-        height: 32px;
-        line-height: 32px;
-        border-radius: 6px;
+        width: pr(90px);
+        height: pr(32px);
+        line-height: pr(32px);
+        border-radius: pr(6px);
         border: dashed 1px #ffffff;
         box-sizing: border-box;
         color: #ffffff;
         float: left;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        font-size: 16px;
+        margin-right: pr(10px);
+        margin-bottom: pr(10px);
+        font-size: pr(16px);
       }
     }
   }
-  .sign-in{
-    width: 250px;
-    position: absolute;
-    top: 29px;
-    right: 38px;
+  .audition-from{
+    width: pr(250px);
+    float: right;
+    margin-top: pr(29px);
+    margin-right: pr(38px);
     input{
-      width: 250px;
-      height: 38px;
-      line-height: 38px;
+      width: pr(250px);
+      height: pr(38px);
+      line-height: pr(38px);
       background-color: #ffffff;
-      border-radius: 4px;
+      border-radius: pr(4px);
       border: solid 1px #dddddd;
       box-sizing: border-box;
-      margin-bottom: 10px;
+      margin-bottom: pr(10px);
     }
     .education{
       display: none;
@@ -351,23 +329,23 @@ input[type="submit"] {
     .education-replace{
       overflow: visible;
       position: relative;
-      width: 250px;
-      height: 40px;
-      line-height: 40px;
-      margin-right: 50px;
-      margin-bottom: 10px;
+      width: pr(250px);
+      height: pr(40px);
+      line-height: pr(40px);
+      margin-right: pr(50px);
+      margin-bottom: pr(10px);
       @extend %in-b;
       .current-education{
         width: 100%;
-        height: 40px;
-        line-height: 40px;
+        height: pr(40px);
+        line-height: pr(40px);
         box-sizing: border-box;
         color: #888888;
         outline: none;
         margin-bottom: 0;
         cursor: pointer;
         border: solid 1px #dddddd;
-        border-radius: 4px;
+        border-radius: pr(4px);
         background: url("../images/triangle-pc.png") #ffffff no-repeat 96% center; // position: 左右 上下
       }
       .education-options{
@@ -375,10 +353,10 @@ input[type="submit"] {
         position: absolute;
         z-index: 10;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: pr(4px);
         background-color: #ffffff;
         li{
-          width: 250px;
+          width: pr(250px);
           padding-left: 1em;
           box-sizing: border-box;
           border-left: 1px solid #a0a0a0;
@@ -397,130 +375,10 @@ input[type="submit"] {
 
     .submit{
       background-color: #f3461e;
-      border-radius: 4px;
+      border-radius: pr(4px);
       border: none;
-      font-size: 16px;
-    }
-  }
-}
-
-/* 试听模块-wap */
-.audition-wap{
-  max-width: pr(750px);
-  height: pr(640px);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: pr(20px);
-  background: url("../images/audition-wap.png") no-repeat;
-  display: none;
-  .degree{
-    width: pr(695px);
-    height: pr(189px);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding-top: pr(34px);
-    padding-bottom: pr(41px);
-    box-sizing: border-box;
-    .title{
-      font-size: pr(48px);
-      line-height: pr(48px);
+      font-size: pr(16px);
       color: #ffffff;
-      font-weight: bold;
-    }
-    .reap{
-      width: pr(565px);
-      margin-top: pr(24px);
-      margin-left: auto;
-      margin-right: auto;
-      display: flex; // 移动端用 flex 布局
-      justify-content: space-between;
-      span{
-        display: block;
-        width: pr(130px);
-        height: pr(42px);
-        line-height: pr(42px);
-        border-radius: pr(6px);
-        font-size:pr(26px);
-        border: dashed 1px #ffffff;
-        box-sizing: border-box;
-        color: #ffffff;
-      }
-    }
-  }
-  .sign-in{
-    width: pr(600px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: pr(50px);
-    input{
-      width: 100%;
-      height: pr(70px);
-      line-height: pr(70px);
-      background-color: #ffffff;
-      border-radius: pr(6px);
-      border: solid 1px #dddddd;
-      box-sizing: border-box;
-      margin-bottom: pr(20px);
-      font-size: pr(28px);
-    }
-    .education-wap{
-      display: none;
-    }
-    .education-wap-replace{
-      overflow: visible;
-      position: relative;
-      width: 100%;
-      height: pr(70px);
-      line-height: pr(70px);
-      margin-right: pr(50px);
-      margin-bottom: pr(20px);
-      @extend %in-b;
-      .current-wap-education{
-        width: 100%;
-        height: pr(70px);
-        line-height: pr(70px);
-        box-sizing: border-box;
-        color: #999999;
-        outline: none;
-        margin-bottom: 0;
-        cursor: pointer;
-        border: solid 1px #dddddd;
-        border-radius: 4px;
-        background: url("../images/triangle-wap.png") #ffffff no-repeat 88% center; // position: 左右 上下
-        font-size: pr(28px);
-      }
-      .education-wap-options{
-        display: none;
-        position: absolute;
-        z-index: 10;
-        cursor: pointer;
-        border-radius: pr(6px);
-        background-color: #ffffff;
-        font-size: pr(28px);
-        li{
-          width: pr(600px);
-          padding-left: 1em;
-          box-sizing: border-box;
-          border-left: 1px solid #a0a0a0;
-          border-right: 1px solid #a0a0a0;
-          text-align: left;
-          color: #999999;
-          &:hover{
-            background-color: #f3461e;
-            border-left: 1px solid #f3461e;
-            border-right: 1px solid #f3461e;
-            color: #ffffff;
-          }
-        }
-      }
-    }
-
-    .submit{
-      background-color: #f3461e;
-      border-radius: pr(10px);
-      font-size: pr(28px);
-      border: none;
     }
   }
 }
@@ -531,9 +389,13 @@ input[type="submit"] {
   height: pr(350px);
   background: url("../images/invite-popup.png") no-repeat;
   background-size: 100% 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: pr(20px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //display: none;
   .close{
     display: block;
     width: pr(18px);
@@ -541,8 +403,8 @@ input[type="submit"] {
     float: right;
     background: url("../images/close.png") no-repeat;
     background-size: 100% 100%;
-    margin-top: 6px;
-    margin-right: 6px;
+    margin-top: pr(6px);
+    margin-right: pr(6px);
     cursor: pointer;
   }
   .invite-data{
@@ -552,8 +414,12 @@ input[type="submit"] {
     box-shadow: 0 pr(4px) pr(13px) 0 rgba(0, 0, 0, 0.83);
     border-radius: pr(20px) pr(20px) 0 pr(20px);
     float: right;
-    margin-top: pr(19px);
-    margin-right: pr(6px);
+    //margin-top: pr(19px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: pr(28px);
+    margin: auto;
     ul {
       padding-top: pr(20px);
       padding-left: pr(30px);
@@ -624,7 +490,7 @@ input[type="submit"] {
         }
       }
     }
-    .sign-in {
+    .invite-form {
       @extend %clearfix;
       input {
         float: left;
@@ -650,6 +516,148 @@ input[type="submit"] {
         border-radius: pr(8px);
         border: none;
         margin-right: 0;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:750px) {
+  /* 测评模块 */
+  .appraisal{
+    .appraisal-data{
+      ul{
+        li{
+          p{
+            font-size: pr(24px);
+          }
+          span{
+            font-size: pr(20px);
+          }
+        }
+      }
+      .appraisal-form{
+        input{
+          font-size: pr(20px);
+        }
+      }
+    }
+    .hint{
+      font-size: pr(20px);
+      line-height: pr(20px);
+    }
+  }
+
+  /* 试听模块 */
+  .audition{
+    max-width: pr(750px);
+    background: url("../images/audition-wap.png") no-repeat;
+    background-size: 100% 100%;
+    .degree{
+      width: 100%;
+      height: pr(189px);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding-top: pr(34px);
+      padding-bottom: pr(41px);
+      margin-bottom: pr(50px);
+      .title{
+        font-size: pr(48px);
+        line-height: pr(48px);
+      }
+      .reap{
+        width: pr(565px);
+        display: flex; // 移动端用 flex 布局
+        justify-content: space-between;
+        span{
+          width: pr(130px);
+          height: pr(42px);
+          line-height: pr(42px);
+          font-size:pr(26px);
+          float: none;
+        }
+      }
+    }
+    .audition-from{
+      width: pr(600px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: pr(50px);
+      float: none;
+      input{
+        width: 100%;
+        height: pr(70px);
+        line-height: pr(70px);
+        border-radius: pr(6px);
+        margin-bottom: pr(20px);
+        font-size: pr(28px);
+      }
+      .education-replace{
+        width: 100%;
+        height: pr(70px);
+        line-height: pr(70px);
+        margin-right: pr(50px);
+        margin-bottom: pr(20px);
+        .current-education{
+          height: pr(70px);
+          line-height: pr(70px);
+          color: #999999;
+          background: url("../images/triangle-wap.png") #ffffff no-repeat 88% center; // position: 左右 上下
+          font-size: pr(28px);
+        }
+        .education-options{
+          border-radius: pr(6px);
+          font-size: pr(28px);
+          li{
+            width: pr(600px);
+            color: #999999;
+          }
+        }
+      }
+
+      .submit{
+        border-radius: pr(10px);
+        font-size: pr(28px);
+      }
+    }
+  }
+
+  /* 邀请弹窗 */
+  .invite-popup{
+    width: pr(700px);
+    height: pr(480px);
+    .close{
+      width: pr(20px);
+      height: pr(20px);
+      margin-top: pr(10px);
+      margin-right: pr(10px);
+    }
+    .invite-data{
+      width: pr(550px);
+      height: pr(382px);
+      right: pr(22px);
+      ul{
+        li{
+          .detail{
+            p{
+              font-size: pr(20px);
+              line-height: pr(20px);
+            }
+            span{
+              font-size: pr(18px);
+            }
+          }
+        }
+      }
+      .invite-form{
+        input{
+          width: pr(270px);
+          font-size: pr(18px);
+        }
+        .submit{
+          width: pr(150px);
+        }
       }
     }
   }

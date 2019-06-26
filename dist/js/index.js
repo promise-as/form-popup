@@ -2,80 +2,30 @@
 
 $(function () {
   /* radio choice fn*/
-  // radioEle: 单选框按钮, submitData: 提交的数据, mergeData: 合并数据
-  function radioChoice(submitData, mergeData) {
-    submitData.children('li span').click(function () {
+  // dataWrap: 数据容器, submitData: 提交的数据, mergeData: 合并数据
+  function radioChoice(dataWrap, submitData) {
+    dataWrap.find('li span').click(function () {
       var aimEle = $(this);
       aimEle.addClass('active').siblings().removeClass('active');
-
-      aimEle.parent().find('user-con').each(function () {
-        $(this).val($(this).parent().find('.active').html());
+      aimEle.parent().find('.user-con').each(function () {
+        $(this).val($(this).siblings('.active').html());
       });
-      var submitData = '';
-      for (var n = 0; n < aimEle.parent().length; n++) {
-        submitData += aimEle.parent().eq(n).find('.active').text() + '、';
+      var mergeData = '';
+      for (var n = 0; n < dataWrap.find('li').length; n++) {
+        mergeData += dataWrap.find('li').eq(n).find('.active').text() + '、';
       }
-      mergeData.val(submitData);
+      submitData.val(mergeData);
     });
-
-    /*radioEle.click(function(submitData){
-      var aimEle = $(this);
-      aimEle.addClass('active').siblings().removeClass('active');
-      // console.log(submitData, 111111);
-      submitData.children('li .user-con').each(function(){
-        $(this).val($(this).parent().find('.active').html());
-      });
-      var submitData = '';
-      for(var n = 0; n < submitData.children('li').length; n++){
-        submitData += submitData.children('li').eq(n).find('.active').text() + '、';
-      }
-      mergeData.val(submitData);
-    });*/
   }
 
-  radioChoice($('.invite-data li span'), $('.invite-data'), $('inviteData'));
-
-  /* 测评模块 */
-  // $('.appraisal-data li span').click(function(){
-  //   $(this).addClass('active').siblings().removeClass('active');
-  //   $('.appraisal-data li .user-con').each(function(){
-  //     $(this).val($(this).parent().find('.active').html());
-  //   });
-  //   var submitData = '';
-  //   for(var n = 0; n < $('.appraisal-data li').length; n++){
-  //     submitData += $('.appraisal-data li').eq(n).find('.active').text() + '、';
-  //   }
-  //   $('#aptitude').val(submitData);
-  // });
-
-  function midtc(ele, c, f, a, n, s) {
-    var $par = $(ele);
-    var $cleardiv = $(s);
-    var $num = 0;
-    popupTc(f);
-    $(c, $par).click(function () {
-      $cleardiv.hide();
-      $par.hide();
-      $num++;
-      if ($num <= n) {
-        popupTc(a);
-      }
-    });
-
-    function popupTc(d) {
-      setTimeout(function () {
-        $cleardiv.show();
-        $par.fadeIn(300);
-      }, d);
-    }
-  }
-
-  midtc('.test_tc', '.test_close', 8000, 30000, 233);
+  // 测评模块
+  radioChoice($('.appraisal-data'), $('#appraisalData'));
+  // 邀请弹窗
+  radioChoice($('.invite-data'), $('#inviteData'));
 
   /* 重置select */
   // currentOption: 当前选项, showOptions: 模拟的options, originalSelect: 原本的select
   function optimizeSelect(currentOption, showOptions, originalSelect) {
-    // console.log(11111);
     currentOption.click(function () {
       showOptions.css("display", "block");
       showOptions.children("li").each(function () {
@@ -87,14 +37,38 @@ $(function () {
           originalSelect.val($(this).attr("rel"));
           showOptions.css("display", "none");
           // 把从option标签的html值赋值给默认显示的option
+          console.log(currentOption.val());
           currentOption.val($(liEle).text());
-          // $('.sel-grade').val($(liEle).text());
         });
       });
     });
   }
-  // 学历-pc
+
+  // 试听模块
   optimizeSelect($(".current-education"), $(".education-options"), $(".education"));
-  // 学历-wap
-  optimizeSelect($(".current-wap-education"), $(".education-wap-options"), $(".education-wap"));
+
+  // ele: 目标元素, c: 关闭按钮, f: 第一次是多少毫秒显示,
+  // a: 第二次是第一次之后多少毫秒显示, n: 一共显示多少次,
+  function popupHandle(ele, c, f, a, n) {
+    var $par = $(ele);
+    var $num = 1;
+    popupTc(f);
+    $(c).click(function () {
+      $par.hide();
+      if ($num < n) {
+        popupTc(a);
+      }
+      $num++;
+    });
+
+    function popupTc(d) {
+      setTimeout(function () {
+        $par.fadeIn(300);
+      }, d);
+    }
+  }
+
+  if ($(".invite-popup").size() > 0) {
+    popupHandle('.invite-popup', '.invite-popup .close', 30000, 40000, 2);
+  }
 });

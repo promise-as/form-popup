@@ -48,7 +48,9 @@ gulp.task('minifycss', function () {
   return gulp.src('src/sass/*.scss')
     .pipe($.sass(
       {
-        outputStyle: 'expanded',  // 编译成css的标准格式
+        // outputStyle: 'expanded',  // 编译成css的标准格式
+        outputStyle: 'compact',  // 编译成css的紧凑格式
+        // outputStyle: 'compressed',  // 编译成css的压缩
       },
     ))
     // 前缀兼容最新两个版本的浏览器

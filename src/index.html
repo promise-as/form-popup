@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="renderer" content="webkit"/>
   <title>表单，弹窗</title>
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/thea.debug.js"></script>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
 
-  <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-  <script type="text/javascript" src="js/thea.debug.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
   <!-- 测评模块 -->
   <div class="appraisal">
     <div class="top">
-      <img src="images/appraisal.png" alt="测评">
+      <img src="https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/appraisal.png" alt="测评">
       <p class="text">
         *每天前10名参与测评的学员，报名即可获赠价值 <span>1000元优惠</span>
       </p>
@@ -82,10 +82,10 @@
           <span>自身价值提升</span>
           <input type="hidden" class="user-con" value="学历学位">
         </li>
-        <form class="sign-in">
+        <form class="appraisal-form">
           <input type="text" class="user-name" placeholder="请输入您的姓名">
           <input type="text" class="user-tel" placeholder="请输入您的联系方式">
-          <input type="hidden" id="aptitude" class="user-con"
+          <input type="hidden" id="appraisalData" class="user-con"
                  value=" 、高中（中专、职校、技校）及以下、应届毕业生、国有企业、总监、全日制研究生、学历学位">
           <input class="submit" type="submit" value="立即测评">
         </form>
@@ -94,9 +94,8 @@
     <p class="hint">提交信息后，评测结果将即时发送至您的手机</p>
   </div>
 
-  <!-- 试听模块-pc -->
-  <div class="audition-pc">
-    <img src="images/audition-pc.png" alt="" class="pc-bg">
+  <!-- 试听模块 -->
+  <div class="audition">
     <div class="degree">
       <div class="title">国际硕士/博士学位</div>
       <div class="reap">
@@ -106,7 +105,7 @@
         <span>全球通认</span>
       </div>
     </div>
-    <form class="sign-in">
+    <form class="audition-from">
       <!--原本的select 隐藏-->
       <select class="education">
         <option>学历</option>
@@ -120,44 +119,6 @@
         <input class="current-education user-con" type="text"
                value="学历" readonly="readonly">
         <ul class="education-options">
-          <li rel="education-1">大专</li>
-          <li rel="education-2">本科</li>
-          <li rel="education-3">硕士</li>
-          <li rel="education-3">其他</li>
-        </ul>
-      </div>
-
-      <input type="text" placeholder="您的姓名" class="user-name">
-      <input type="text" placeholder="手机号码" class="user-tel">
-      <input type="submit" value="预约免费听课" class="submit">
-    </form>
-  </div>
-
-  <!-- 试听模块-wap -->
-  <div class="audition-wap">
-    <div class="degree">
-      <div class="title">国际硕士/博士学位</div>
-      <div class="reap">
-        <span>免试入学</span>
-        <span>轻松拿证</span>
-        <span>黄金人脉</span>
-        <span>全球通认</span>
-      </div>
-    </div>
-    <form class="sign-in">
-      <!--原本的select 隐藏-->
-      <select class="education-wap">
-        <option>学历</option>
-        <option value="education-1">大专</option>
-        <option value="education-2">本科</option>
-        <option value="education-3">硕士</option>
-        <option value="education-3">其他</option>
-      </select>
-      <!--显示模拟的select-->
-      <div class="education-wap-replace">
-        <input class="current-wap-education user-con" type="text"
-               value="学历" readonly="readonly">
-        <ul class="education-wap-options">
           <li rel="education-1">大专</li>
           <li rel="education-2">本科</li>
           <li rel="education-3">硕士</li>
@@ -222,7 +183,7 @@
           </div>
 
         </li>
-        <form class="sign-in">
+        <form class="invite-form">
           <input type="hidden" class="user-name" value="佚名" placeholder="">
           <input type="text" class="user-tel" placeholder="请输入您的手机号/微信号">
           <input type="hidden" id="inviteData" class="user-con"

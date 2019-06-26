@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>试听模块</title>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/thea.debug.js"></script>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/modules-style.css"/>
+</head>
+<body>
+
+<!-- 试听模块 -->
+<div class="audition">
+  <div class="degree">
+    <div class="title">国际硕士/博士学位</div>
+    <div class="reap">
+      <span>免试入学</span>
+      <span>轻松拿证</span>
+      <span>黄金人脉</span>
+      <span>全球通认</span>
+    </div>
+  </div>
+  <form class="audition-from">
+    <!--原本的select 隐藏-->
+    <select class="education">
+      <option>学历</option>
+      <option value="education-1">大专</option>
+      <option value="education-2">本科</option>
+      <option value="education-3">硕士</option>
+      <option value="education-3">其他</option>
+    </select>
+    <!--显示模拟的select-->
+    <div class="education-replace">
+      <input class="current-education user-con" type="text"
+             value="学历" readonly="readonly">
+      <ul class="education-options">
+        <li rel="education-1">大专</li>
+        <li rel="education-2">本科</li>
+        <li rel="education-3">硕士</li>
+        <li rel="education-3">其他</li>
+      </ul>
+    </div>
+
+    <input type="text" placeholder="您的姓名" class="user-name">
+    <input type="text" placeholder="手机号码" class="user-tel">
+    <input type="submit" value="预约免费听课" class="submit">
+  </form>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
+  <script type="text/javascript">
+    /* 重置select */
+    // currentOption: 当前选项, showOptions: 模拟的options, originalSelect: 原本的select
+    function optimizeSelect(currentOption, showOptions, originalSelect) {
+      currentOption.click(function () {
+        showOptions.css("display", "block");
+        showOptions.children("li").each(function () {
+          var liEle = this;
+          // 点击默认显示的option标签，就显示模拟的options
+          $(liEle).click(function () {
+            // 默认显示的option标签
+            // 取模拟的select的li的rel的值赋值给option标签的value
+            originalSelect.val($(this).attr("rel"));
+            showOptions.css("display", "none");
+            // 把从option标签的html值赋值给默认显示的option
+            console.log(currentOption.val());
+            currentOption.val($(liEle).text());
+          });
+        });
+      });
+    }
+    // 试听模块
+    optimizeSelect($(".current-education"), $(".education-options"), $(".education"));
+    theaMsForm($('.audition-from'));
+  </script>
+</div>
+
+</body>
+</html>

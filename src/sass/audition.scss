@@ -1,0 +1,233 @@
+$browser-default-font-size: 75px!default;
+@function pr($px){
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+/* 试听模块 */
+%clearfix {
+  zoom: 1;
+
+  &:after {
+    clear: both;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+.audition{
+  width: pr(740px);
+  //height: 240px;
+  margin: pr(10px) auto;
+  background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/audition-pc.png") no-repeat;
+  background-size: 100% 100%;
+  @extend %clearfix;
+  padding-bottom: pr(19px);
+  //display: none;
+  .degree{
+    width: pr(384px);
+    height: pr(210px);
+    padding-top: pr(48px);
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    margin-left: pr(21px);
+    .title{
+      font-size: pr(28px);
+      line-height: pr(32px);
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .reap{
+      width: pr(200px);
+      margin-top: pr(24px);
+      margin-left: auto;
+      margin-right: auto;
+      @extend %clearfix;
+      span{
+        display: block;
+        width: pr(90px);
+        height: pr(32px);
+        line-height: pr(32px);
+        border-radius: pr(6px);
+        border: dashed 1px #ffffff;
+        box-sizing: border-box;
+        color: #ffffff;
+        float: left;
+        margin-right: pr(10px);
+        margin-bottom: pr(10px);
+        font-size: pr(16px);
+      }
+    }
+  }
+  .audition-from{
+    width: pr(250px);
+    float: right;
+    margin-top: pr(29px);
+    margin-right: pr(38px);
+    input{
+      width: pr(250px);
+      height: pr(38px);
+      line-height: pr(38px);
+      background-color: #ffffff;
+      border-radius: pr(4px);
+      border: solid 1px #dddddd;
+      box-sizing: border-box;
+      margin-bottom: pr(10px);
+      text-indent: 1em;
+    }
+    .education{
+      display: none;
+    }
+    .education-replace{
+      overflow: visible;
+      position: relative;
+      width: pr(250px);
+      height: pr(40px);
+      line-height: pr(40px);
+      margin-right: pr(50px);
+      margin-bottom: pr(10px);
+      display: inline-block;
+      .current-education{
+        width: 100%;
+        height: pr(40px);
+        line-height: pr(40px);
+        box-sizing: border-box;
+        color: #888888;
+        outline: none;
+        margin-bottom: 0;
+        cursor: pointer;
+        border: solid 1px #dddddd;
+        border-radius: pr(4px);
+        background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/triangle-pc.png") #ffffff no-repeat 96% center; // position: 左右 上下
+      }
+      .education-options{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: pr(4px);
+        background-color: #ffffff;
+        li{
+          width: pr(250px);
+          padding-left: 1em;
+          box-sizing: border-box;
+          border-left: 1px solid #a0a0a0;
+          border-right: 1px solid #a0a0a0;
+          text-align: left;
+          color: #888888;
+          &:hover{
+            background-color: #f3461e;
+            border-left: 1px solid #f3461e;
+            border-right: 1px solid #f3461e;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .submit{
+      background-color: #f3461e;
+      border-radius: pr(4px);
+      border: none;
+      font-size: pr(16px);
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+
+  input::-moz-placeholder {
+    color: #999;
+  }
+
+  input::-moz-placeholder {
+    color: #999;
+  }
+
+  input:-ms-input-placeholder {
+    color: #999;
+  }
+}
+
+@media screen and (max-width:750px) {
+  /* 试听模块 */
+  .audition{
+    max-width: pr(750px);
+    background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/audition-wap.png") no-repeat;
+    background-size: 100% 100%;
+    .degree{
+      width: 100%;
+      height: pr(189px);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding-top: pr(34px);
+      padding-bottom: pr(41px);
+      margin-bottom: pr(50px);
+      .title{
+        font-size: pr(48px);
+        line-height: pr(48px);
+      }
+      .reap{
+        width: pr(565px);
+        display: flex; // 移动端用 flex 布局
+        justify-content: space-between;
+        span{
+          width: pr(130px);
+          height: pr(42px);
+          line-height: pr(42px);
+          font-size:pr(26px);
+          float: none;
+        }
+      }
+    }
+    .audition-from{
+      width: pr(600px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: pr(50px);
+      float: none;
+      input{
+        width: 100%;
+        height: pr(70px);
+        line-height: pr(70px);
+        border-radius: pr(6px);
+        margin-bottom: pr(20px);
+        font-size: pr(28px);
+      }
+      .education-replace{
+        width: 100%;
+        height: pr(70px);
+        line-height: pr(70px);
+        margin-right: pr(50px);
+        margin-bottom: pr(20px);
+        .current-education{
+          height: pr(70px);
+          line-height: pr(70px);
+          color: #999999;
+          background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/triangle-wap.png") #ffffff no-repeat 88% center; // position: 左右 上下
+          font-size: pr(28px);
+        }
+        .education-options{
+          border-radius: pr(6px);
+          font-size: pr(28px);
+          li{
+            width: pr(600px);
+            color: #999999;
+          }
+        }
+      }
+
+      .submit{
+        border-radius: pr(10px);
+        font-size: pr(28px);
+      }
+    }
+  }
+}

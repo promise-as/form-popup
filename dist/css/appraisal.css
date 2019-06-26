@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 测评模块 */
+.appraisal .appraisal-data .appraisal-form { zoom: 1; }
+
+.appraisal .appraisal-data .appraisal-form:after { clear: both; }
+
+.appraisal .appraisal-data .appraisal-form:before, .appraisal .appraisal-data .appraisal-form:after { content: ""; display: table; }
+
+.appraisal { width: 9.86667rem; background-color: #ffffff; -webkit-box-shadow: 0 0 0.26667rem 0 rgba(176, 179, 184, 0.45); box-shadow: 0 0 0.26667rem 0 rgba(176, 179, 184, 0.45); border-radius: 0 0 0.8rem 0.8rem; margin: 1.73333rem auto 0.13333rem; border-top: 1px solid transparent; padding-bottom: 0.44rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.appraisal .top { height: 3.2rem; margin-top: -1.6rem; position: relative; }
+
+.appraisal .top img { position: absolute; top: 0; left: 0; width: 100%; }
+
+.appraisal .top .text { position: absolute; top: 2.6rem; left: 1.81333rem; font-size: 0.18667rem; color: #f2f2f2; }
+
+.appraisal .top .text span { color: #fdff5b; }
+
+.appraisal .appraisal-data { width: 100%; margin-bottom: 0.37333rem; }
+
+.appraisal .appraisal-data ul { padding-top: 0.26667rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.appraisal .appraisal-data ul li { margin: 0.13333rem 0.13333rem 0.24rem 0.53333rem; }
+
+.appraisal .appraisal-data ul li p { margin-bottom: 0.4rem; margin-top: 0.02667rem; margin-left: -1px; font-size: 0.21333rem; color: #333333; }
+
+.appraisal .appraisal-data ul li p input { width: 1.36rem; height: 0.4rem; border-radius: 0.05333rem; border: solid 1px #dddddd; -webkit-box-sizing: border-box; box-sizing: border-box; margin-left: 1em; margin-right: 1em; text-indent: 1em; }
+
+.appraisal .appraisal-data ul li span { display: inline-block; min-width: 1.94667rem; position: relative; margin-bottom: 0.29333rem; padding-left: 0.38667rem; cursor: pointer; font-size: 0.18667rem; height: 0.18667rem; line-height: 0.18667rem; color: #666666; padding-right: 0.32rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.appraisal .appraisal-data ul li span:before { content: ""; width: 0.18667rem; height: 0.18667rem; position: absolute; left: 0; top: 0; border-radius: 100%; background-color: #fff; border: 1px solid #333333; -webkit-box-sizing: border-box; box-sizing: border-box; vertical-align: text-top; }
+
+.appraisal .appraisal-data ul li span:after { content: ""; width: 0.10667rem; height: 0.10667rem; position: absolute; top: 0.04rem; left: 0.04rem; border-radius: 100%; }
+
+.appraisal .appraisal-data ul li span.active:before { border: 1px solid #d92912; }
+
+.appraisal .appraisal-data ul li span.active:after { background-color: #d92912; }
+
+.appraisal .appraisal-data .appraisal-form { margin-left: 0.53333rem; margin-right: 0.53333rem; border-top: 1px dashed #dddddd; padding-top: 0.4rem; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.appraisal .appraisal-data .appraisal-form input { float: left; width: 3.2rem; height: 0.53333rem; line-height: 0.53333rem; border: 1px solid #aaa; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0.05333rem; font-size: 0.18667rem; outline: none; margin-right: 0.13333rem; text-indent: 1em; }
+
+.appraisal .appraisal-data .appraisal-form .submit { width: 2.13333rem; height: 0.53333rem; background-color: #d92912; border-radius: 0.26667rem; border: none; margin-right: 0; color: #ffffff; cursor: pointer; }
+
+.appraisal .hint { font-size: 0.18667rem; line-height: 0.18667rem; color: #333333; text-align: center; }
+
+.appraisal input::-webkit-input-placeholder { color: #999; }
+
+.appraisal input::-moz-placeholder { color: #999; }
+
+.appraisal input::-moz-placeholder { color: #999; }
+
+.appraisal input:-ms-input-placeholder { color: #999; }
+
+@media screen and (max-width: 750px) { /* 测评模块 */
+  .appraisal .appraisal-data ul li p { font-size: 0.32rem; }
+  .appraisal .appraisal-data ul li span { font-size: 0.26667rem; }
+  .appraisal .appraisal-data .appraisal-form input { font-size: 0.26667rem; }
+  .appraisal .hint { font-size: 0.26667rem; line-height: 0.26667rem; } }

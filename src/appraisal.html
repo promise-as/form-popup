@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测评模块</title>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/thea.debug.js"></script>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/modules-style.css"/>
+</head>
+<body>
+
+<div class="appraisal">
+  <div class="top">
+    <img src="https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/appraisal.png" alt="测评">
+    <p class="text">
+      *每天前10名参与测评的学员，报名即可获赠价值 <span>1000元优惠</span>
+    </p>
+  </div>
+  <div class="appraisal-data">
+    <ul>
+      <li>
+        <p>1. 您的年龄是<input type="text" class="user-con">周岁</p>
+        <input type="hidden" class="user-con" value="">
+      </li>
+      <li>
+        <p>2. 您目前的最高学历？</p>
+        <span class="active">高中（中专、职校、技校）及以下</span>
+        <span>大专（高职）学历</span>
+        <span>大学本科学历</span>
+        <span>硕士研究生学位</span>
+        <span>硕士研究生学历学位</span>
+        <span>博士研究生学历学位</span>
+        <span>大学本科学历和学士学位</span>
+        <input type="hidden" class="user-con" value="高中（中专、职校、技校）及以下">
+      </li>
+      <li>
+        <p>3. 您的毕业年限？</p>
+        <span class="active">应届毕业生</span>
+        <span>1-3年</span>
+        <span>3-4年</span>
+        <span>4-5年</span>
+        <span>5年以上</span>
+        <input type="hidden" class="user-con" value="应届毕业生">
+      </li>
+      <li>
+        <p>4. 您目前所在的公司属性？</p>
+        <span class="active">国有企业</span>
+        <span>民营企业</span>
+        <span>外资企业</span>
+        <span>其他</span>
+        <input type="hidden" class="user-con" value="国有企业">
+      </li>
+      <li>
+        <p>5. 您目前的职位？</p>
+        <span class="active">总监</span>
+        <span>总经理（副总）</span>
+        <span>董事长</span>
+        <span>投资人</span>
+        <span>其他</span>
+        <input type="hidden" class="user-con" value="总监">
+      </li>
+      <li>
+        <p>6. 您想学习的主要课程类型？</p>
+        <span class="active">全日制研究生</span>
+        <span>在职研究生</span>
+        <span>EMBA学位班</span>
+        <span>国外免考MBA学位班</span>
+        <span>国外免考DBA学位班</span>
+        <input type="hidden" class="user-con" value="全日制研究生">
+      </li>
+      <li>
+        <p>7. 您想提升的方面？</p>
+        <span class="active">学历学位</span>
+        <span>实战管理经验</span>
+        <span>人脉拓展</span>
+        <span>自身价值提升</span>
+        <input type="hidden" class="user-con" value="学历学位">
+      </li>
+      <form class="appraisal-form">
+        <input type="text" class="user-name" placeholder="请输入您的姓名">
+        <input type="text" class="user-tel" placeholder="请输入您的联系方式">
+        <input type="hidden" id="appraisalData" class="user-con"
+               value=" 、高中（中专、职校、技校）及以下、应届毕业生、国有企业、总监、全日制研究生、学历学位">
+        <input class="submit" type="submit" value="立即测评">
+      </form>
+      <script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
+      <script type="text/javascript">
+        // dataWrap: 数据容器, submitData: 提交的数据, mergeData: 合并数据
+        function radioChoice(dataWrap, submitData) {
+          dataWrap.find('li span').click(function () {
+            var aimEle = $(this);
+            aimEle.addClass('active').siblings().removeClass('active');
+            aimEle.parent().find('.user-con').each(function () {
+              $(this).val($(this).siblings('.active').html());
+            });
+            var mergeData = '';
+            for (var n = 0; n < dataWrap.find('li').length; n++) {
+              mergeData += dataWrap.find('li').eq(n).find('.active').text() + '、';
+            }
+            submitData.val(mergeData);
+          });
+        }
+        radioChoice($('.appraisal-data'), $('#appraisalData'));
+        theaMsForm($('.appraisal-form'));
+      </script>
+    </ul>
+  </div>
+  <p class="hint">提交信息后，评测结果将即时发送至您的手机</p>
+</div>
+
+</body>
+</html>

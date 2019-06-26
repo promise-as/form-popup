@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* 试听模块 */
+.audition, .audition .degree .reap { zoom: 1; }
+
+.audition:after, .audition .degree .reap:after { clear: both; }
+
+.audition:before, .audition .degree .reap:before, .audition:after, .audition .degree .reap:after { content: ""; display: table; }
+
+.audition { width: 9.86667rem; margin: 0.13333rem auto; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/audition-pc.png") no-repeat; background-size: 100% 100%; padding-bottom: 0.25333rem; }
+
+.audition .degree { width: 5.12rem; height: 2.8rem; padding-top: 0.64rem; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; float: left; margin-left: 0.28rem; }
+
+.audition .degree .title { font-size: 0.37333rem; line-height: 0.42667rem; color: #ffffff; font-weight: bold; }
+
+.audition .degree .reap { width: 2.66667rem; margin-top: 0.32rem; margin-left: auto; margin-right: auto; }
+
+.audition .degree .reap span { display: block; width: 1.2rem; height: 0.42667rem; line-height: 0.42667rem; border-radius: 0.08rem; border: dashed 1px #ffffff; -webkit-box-sizing: border-box; box-sizing: border-box; color: #ffffff; float: left; margin-right: 0.13333rem; margin-bottom: 0.13333rem; font-size: 0.21333rem; }
+
+.audition .audition-from { width: 3.33333rem; float: right; margin-top: 0.38667rem; margin-right: 0.50667rem; }
+
+.audition .audition-from input { width: 3.33333rem; height: 0.50667rem; line-height: 0.50667rem; background-color: #ffffff; border-radius: 0.05333rem; border: solid 1px #dddddd; -webkit-box-sizing: border-box; box-sizing: border-box; margin-bottom: 0.13333rem; text-indent: 1em; }
+
+.audition .audition-from .education { display: none; }
+
+.audition .audition-from .education-replace { overflow: visible; position: relative; width: 3.33333rem; height: 0.53333rem; line-height: 0.53333rem; margin-right: 0.66667rem; margin-bottom: 0.13333rem; display: inline-block; }
+
+.audition .audition-from .education-replace .current-education { width: 100%; height: 0.53333rem; line-height: 0.53333rem; -webkit-box-sizing: border-box; box-sizing: border-box; color: #888888; outline: none; margin-bottom: 0; cursor: pointer; border: solid 1px #dddddd; border-radius: 0.05333rem; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/triangle-pc.png") #ffffff no-repeat 96% center; }
+
+.audition .audition-from .education-replace .education-options { display: none; position: absolute; z-index: 10; cursor: pointer; border-radius: 0.05333rem; background-color: #ffffff; }
+
+.audition .audition-from .education-replace .education-options li { width: 3.33333rem; padding-left: 1em; -webkit-box-sizing: border-box; box-sizing: border-box; border-left: 1px solid #a0a0a0; border-right: 1px solid #a0a0a0; text-align: left; color: #888888; }
+
+.audition .audition-from .education-replace .education-options li:hover { background-color: #f3461e; border-left: 1px solid #f3461e; border-right: 1px solid #f3461e; color: #ffffff; }
+
+.audition .audition-from .submit { background-color: #f3461e; border-radius: 0.05333rem; border: none; font-size: 0.21333rem; color: #ffffff; cursor: pointer; }
+
+.audition input::-webkit-input-placeholder { color: #999; }
+
+.audition input::-moz-placeholder { color: #999; }
+
+.audition input::-moz-placeholder { color: #999; }
+
+.audition input:-ms-input-placeholder { color: #999; }
+
+@media screen and (max-width: 750px) { /* 试听模块 */
+  .audition { max-width: 10rem; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/audition-wap.png") no-repeat; background-size: 100% 100%; }
+  .audition .degree { width: 100%; height: 2.52rem; margin-left: auto; margin-right: auto; text-align: center; padding-top: 0.45333rem; padding-bottom: 0.54667rem; margin-bottom: 0.66667rem; }
+  .audition .degree .title { font-size: 0.64rem; line-height: 0.64rem; }
+  .audition .degree .reap { width: 7.53333rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  .audition .degree .reap span { width: 1.73333rem; height: 0.56rem; line-height: 0.56rem; font-size: 0.34667rem; float: none; }
+  .audition .audition-from { width: 8rem; margin-left: auto; margin-right: auto; margin-top: 0.66667rem; float: none; }
+  .audition .audition-from input { width: 100%; height: 0.93333rem; line-height: 0.93333rem; border-radius: 0.08rem; margin-bottom: 0.26667rem; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace { width: 100%; height: 0.93333rem; line-height: 0.93333rem; margin-right: 0.66667rem; margin-bottom: 0.26667rem; }
+  .audition .audition-from .education-replace .current-education { height: 0.93333rem; line-height: 0.93333rem; color: #999999; background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/triangle-wap.png") #ffffff no-repeat 88% center; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace .education-options { border-radius: 0.08rem; font-size: 0.37333rem; }
+  .audition .audition-from .education-replace .education-options li { width: 8rem; color: #999999; }
+  .audition .audition-from .submit { border-radius: 0.13333rem; font-size: 0.37333rem; } }

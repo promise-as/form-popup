@@ -1,0 +1,221 @@
+$browser-default-font-size: 75px!default;
+@function pr($px){
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+/* 测评模块 */
+%clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+.appraisal {
+  width: pr(740px);
+  background-color: #ffffff;
+  box-shadow: 0 0 pr(20px) 0 rgba(176, 179, 184, 0.45);
+  border-radius: 0 0 pr(60px) pr(60px);
+  margin: pr(130px) auto pr(10px); // 居中
+  border-top: 1px solid transparent; // 解决 margin-top 塌陷
+  padding-bottom: pr(33px);
+  box-sizing: border-box;
+  //display: none;
+  .top {
+    height: pr(240px);
+    margin-top: pr(-120px);
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .text {
+      position: absolute;
+      top: pr(195px);
+      left: pr(136px);
+      font-size: pr(14px);
+      color: #f2f2f2;
+
+      span {
+        color: #fdff5b;
+      }
+    }
+  }
+
+  .appraisal-data {
+    width: 100%;
+    //height: 1120px;
+    margin-bottom: pr(28px);
+
+    ul {
+      padding-top: pr(20px);
+      box-sizing: border-box;
+
+      li {
+        margin: pr(10px) pr(10px) pr(18px) pr(40px);
+
+        p {
+          margin-bottom: pr(30px);
+          margin-top: pr(2px);
+          margin-left: -1px;
+          font-size: pr(16px);
+          color: #333333;
+
+          input {
+            width: pr(102px);
+            height: pr(30px);
+            border-radius: pr(4px);
+            border: solid 1px #dddddd;
+            box-sizing: border-box;
+            margin-left: 1em;
+            margin-right: 1em;
+            text-indent: 1em;
+          }
+        }
+
+        span {
+          display: inline-block;
+          min-width: pr(146px);
+          position: relative;
+          margin-bottom: pr(22px);
+          padding-left: pr(29px);
+          cursor: pointer;
+          font-size: pr(14px);
+          height: pr(14px);
+          line-height: pr(14px);
+          color: #666666;
+          padding-right: pr(24px);
+          box-sizing: border-box;
+
+          &:before {
+            content: "";
+            width: pr(14px);
+            height: pr(14px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 100%;
+            background-color: #fff;
+            border: 1px solid #333333;
+            box-sizing: border-box;
+            vertical-align: text-top;
+          }
+
+          &:after {
+            content: "";
+            width: pr(8px);
+            height: pr(8px);
+            position: absolute;
+            top: pr(3px);
+            left: pr(3px);
+            border-radius: 100%;
+          }
+
+          &.active {
+            &:before {
+              border: 1px solid #d92912;
+            }
+
+            &:after {
+              background-color: #d92912;
+            }
+          }
+        }
+      }
+    }
+
+    .appraisal-form {
+      margin-left: pr(40px);
+      margin-right: pr(40px);
+      border-top: 1px dashed #dddddd;
+      padding-top: pr(30px);
+      box-sizing: border-box;
+      @extend %clearfix;
+
+      input {
+        float: left;
+        width: pr(240px);
+        height: pr(40px);
+        line-height: pr(40px);
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+        border-radius: pr(4px);
+        font-size: pr(14px);
+        outline: none;
+        margin-right: pr(10px);
+        text-indent: 1em;
+      }
+
+      .submit {
+        width: pr(160px);
+        height: pr(40px);
+        background-color: #d92912;
+        border-radius: pr(20px);
+        border: none;
+        margin-right: 0;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .hint {
+    font-size: pr(14px);
+    line-height: pr(14px);
+    color: #333333;
+    text-align: center;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+
+  input::-moz-placeholder {
+    color: #999;
+  }
+
+  input::-moz-placeholder {
+    color: #999;
+  }
+
+  input:-ms-input-placeholder {
+    color: #999;
+  }
+}
+
+@media screen and (max-width:750px) {
+
+  /* 测评模块 */
+  .appraisal{
+    .appraisal-data{
+      ul{
+        li{
+          p{
+            font-size: pr(24px);
+          }
+          span{
+            font-size: pr(20px);
+          }
+        }
+      }
+      .appraisal-form{
+        input{
+          font-size: pr(20px);
+        }
+      }
+    }
+    .hint{
+      font-size: pr(20px);
+      line-height: pr(20px);
+    }
+  }
+}
